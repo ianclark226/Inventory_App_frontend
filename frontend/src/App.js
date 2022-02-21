@@ -1,12 +1,19 @@
 import React from "react";
-import Router from "./router";
-import 'antd/dist/antd.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import CheckUserPage from "./pages/CheckUserPage"
+import 'antd/dist/antd.min.css'
 import './style.scss';
 
 
 const App = () => {
     return (
-        <Router />
+    <BrowserRouter>
+        <Routes>
+            {/* <Route path="/login" exact element={<LoginPage />}/> */}
+            <Route path="/check-user" exact element={<CheckUserPage />}/>
+        </Routes>
+    </BrowserRouter>
     )
 }
 
